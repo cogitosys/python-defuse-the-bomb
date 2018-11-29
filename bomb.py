@@ -9,6 +9,7 @@ import getpass
 
 GLOBAL_BOMB_PASSWORD = 1
 
+
 def detonate():
     print('The bomb blew up!!1!')
     import sys
@@ -37,7 +38,7 @@ def main():
         print('Uhoh, it\'s about to explode!')
         detonate()
         print('Congratulations, you have defused the bomb!')
-    except:
+    except Exception:
         detonate()
 
 
