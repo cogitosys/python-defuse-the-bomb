@@ -1,6 +1,7 @@
 # Defuse the bomb in Python
 
-This repository is a defuse the bomb-style training exercise in debugging python.
+This repository is a "defuse the bomb"-style training exercise in debugging python.
+Reading the guide is recommended.
 
 # Training goals:
 
