@@ -14,6 +14,10 @@ Reading the guide is recommended.
 * Learn how to inspect python program state from gdb
 * Change program state from within gdb
 
+# Acknowledgements
+
+This exercise is based off the binary bomb lab from CMU (obviously adapted to Python).
+
 # License
 
 MIT
