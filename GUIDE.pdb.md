@@ -1,12 +1,8 @@
 
-# Guide to defusing the bomb
+# Guide to defusing the bomb using PDB
 
-Each section presents various ways of debugging python.
 If you just want a quick and dirty walkthrough, check the SPOILERS guide.
-
 It's suggested to use only the debugger to practice, and not look at the code.
-
-# Defusing the bomb using pdb
 
 Run the script using pdb:
 
@@ -46,37 +42,3 @@ The `a(rgs)` command prints the arguments to the current frame.
 
 The `exec` and `!` commands will execute a python statement in the current frame.
 This can be used to change the value of a variable, for example.
-
-# Defusing the bomb using gdb and python-dbg
-
-First, you'll need to install python-dbg on your system.
-
-Run the script and attach gdb to it.
-
-```
-python-dbg bomb.py
-```
-
-```
-gdb -P $(pidof python-dbg)
-```
-
-Once you've attached, you'll probably want to 
-
-## Controlling program execution
-
-TODO
-
-## Viewing python state
-
-TODO
-
-## Changing python state
-
-Changing a global's value:
-
-```
-call PyDict_SetItemString(globals, "i", PyLong_FromLong(0))
-```
-
-TODO
