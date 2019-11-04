@@ -1,7 +1,7 @@
 # Defuse the bomb in Python
 
 This repository is a "defuse the bomb"-style training exercise in debugging python.
-Reading the guide is recommended.
+Reading the guide is recommended, but remember that the goal is to learn and the best way to do that is to explore a bit.
 
 # Training goals:
 
@@ -16,7 +16,7 @@ Reading the guide is recommended.
 
 # Acknowledgements
 
-This exercise is based off the binary bomb lab from CMU (obviously adapted to Python).
+This exercise is conceptually based off the binary bomb lab from CMU (obviously adapted to Python).
 
 # License
 
