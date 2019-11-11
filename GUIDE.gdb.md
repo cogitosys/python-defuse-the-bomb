@@ -49,14 +49,10 @@ gdb --pid $(pidof python)
 
 Many of the gdb python helpers will only work when you're at a `PyEval_EvalFrameEx` frame.
 
-## Controlling program execution
-
-The helpers aren't great for controlling execution, but you can set breakpoints in 
+## Viewing python state
 
 The `py-up` and `py-down` commands move the current frame up and down the python backtrace.
 There may be many non-python frames on the stack, these will skip over them.
-
-## Viewing python state
 
 The `py-bt` command will give a python traceback from the currently selected frame.
 The `py-bt-full` command will show the python frames closer to the way gdb would normally show them.
@@ -77,7 +73,17 @@ call PyDict_SetItemString(f->f_globals, "foo", PyLong_FromLong(0))
 
 TODO
 
-### Controlling execution flow
+## Controlling execution flow
+
+### Setting a breakpoint
+
+We can set a conditional breakpoint, but expect a hefty performance hit:
+
+```
+b PyEval_EvalFrameEx if strcmp(PyString_AsString(f->f_code->co_name), "function_to_break_at") == 0
+```
+
+### Jumping over code
 
 TODO
 
