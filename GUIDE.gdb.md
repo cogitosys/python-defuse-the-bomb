@@ -16,7 +16,7 @@ sudo apt-get install -y python2.7-dbg gdb
 
 The [gdb python helpers][gdb-python-helpers-2.7] are installed into the autoload path by the python2.7-dbg package, so everything should work out of the box.
 
-There are some reports that this package provides symbols for regular python, and not only for python-dbg, but I've yet to confirm that.
+This package provides two things: debug symbols for python, and a custom build of python called `python-dbg` with extra memory debugging features enabled. We won't be touching `python-dbg`.
 
 [gdb-python-helpers-2.7]: https://github.com/python/cpython/blob/2.7/Tools/gdb/libpython.py
 
